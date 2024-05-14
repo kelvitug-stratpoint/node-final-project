@@ -1,0 +1,26 @@
+{
+  "name": "cadet-final-project",
+  "version": "1.0.0",
+  "description": "Stratpoint cadetship final project",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelvitug-stratpoint/node-final-project.git"
+  },
+  "author": "Kelvin Vitug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelvitug-stratpoint/node-final-project/issues"
+  },
+  "homepage": "https://github.com/kelvitug-stratpoint/node-final-project#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
+  }
+}
