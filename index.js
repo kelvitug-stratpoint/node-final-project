@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config()
 //routes
 
-const bookRoute = require('./routes/book.route')
+const bookRoute = require('./api/routes/book.route')
 
 mongoose.connect(process.env.MONGO_CONNECTION).then(() => {
     console.log('connected to database')
