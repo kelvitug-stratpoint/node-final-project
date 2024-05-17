@@ -7,19 +7,17 @@ exports.createBook = async (req, res) => {
     const duplicateBook = await Book.findOne({ title: title });
 
     if(duplicateBook){
-      res.status(400).json({ 
-        message: 'Duplicate book found' 
-      });
+      res.status(400).json({ message: 'Duplicate book found' });
     }
     const book = new Book(req.body);
     await book.save();
 
     await book.validate();
-    res.status(200).json({
+    res.json({
       message: 'Book successfully added!'
     });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -30,9 +28,9 @@ exports.updateBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
     await book.validate();
-    res.json(book);
+    res.json({ message: 'Book successfully updated!'});
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -44,16 +42,17 @@ exports.deleteBook = async (req, res) => {
     }
     res.json({ message: 'Book deleted successfully' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
 exports.getAllBooks = async (req, res) => {
   try {
+    console.log(req.userId);
     const books = await Book.find({ deleted_at: null });
     res.json(books);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -65,6 +64,6 @@ exports.getBookById = async (req, res) => {
     }
     res.json(book);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
