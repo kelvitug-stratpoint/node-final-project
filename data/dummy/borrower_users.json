@@ -1,0 +1,103 @@
+[
+    {
+      "username": "johnsmith1",
+      "password": "test@123",
+      "fullname": "John Smith"
+    },
+    {
+      "username": "janedoe2",
+      "password": "test@123",
+      "fullname": "Jane Doe"
+    },
+    {
+      "username": "michaelbrown3",
+      "password": "test@123",
+      "fullname": "Michael Brown"
+    },
+    {
+      "username": "emilyjohnson4",
+      "password": "test@123",
+      "fullname": "Emily Johnson"
+    },
+    {
+      "username": "chrismiller5",
+      "password": "test@123",
+      "fullname": "Chris Miller"
+    },
+    {
+      "username": "sarahwilson6",
+      "password": "test@123",
+      "fullname": "Sarah Wilson"
+    },
+    {
+      "username": "davidlee7",
+      "password": "test@123",
+      "fullname": "David Lee"
+    },
+    {
+      "username": "lauramartin8",
+      "password": "test@123",
+      "fullname": "Laura Martin"
+    },
+    {
+      "username": "roberttaylor9",
+      "password": "test@123",
+      "fullname": "Robert Taylor"
+    },
+    {
+      "username": "lindaanderson10",
+      "password": "test@123",
+      "fullname": "Linda Anderson"
+    },
+    {
+      "username": "williamthomas11",
+      "password": "test@123",
+      "fullname": "William Thomas"
+    },
+    {
+      "username": "barbaraharris12",
+      "password": "test@123",
+      "fullname": "Barbara Harris"
+    },
+    {
+      "username": "josephmartinez13",
+      "password": "test@123",
+      "fullname": "Joseph Martinez"
+    },
+    {
+      "username": "patriciarodriguez14",
+      "password": "test@123",
+      "fullname": "Patricia Rodriguez"
+    },
+    {
+      "username": "thomasmoore15",
+      "password": "test@123",
+      "fullname": "Thomas Moore"
+    },
+    {
+      "username": "karenjackson16",
+      "password": "test@123",
+      "fullname": "Karen Jackson"
+    },
+    {
+      "username": "charleslee17",
+      "password": "test@123",
+      "fullname": "Charles Lee"
+    },
+    {
+      "username": "susanwhite18",
+      "password": "test@123",
+      "fullname": "Susan White"
+    },
+    {
+      "username": "matthewhall19",
+      "password": "test@123",
+      "fullname": "Matthew Hall"
+    },
+    {
+      "username": "dorothyyoung20",
+      "password": "test@123",
+      "fullname": "Dorothy Young"
+    }
+  ]
+  

@@ -1,0 +1,235 @@
+[
+  {
+    "title": "Wild hunger v2",
+    "author": "Jayson Pamintuan",
+    "publisher": "Normal Dayrit",
+    "description": "Wild hunger description good",
+    "isbn": 29202,
+    "status": "Available",
+    "item_count": 0
+  },
+  {
+    "title": "Lion King",
+    "author": "Norman G",
+    "publisher": "Cloud Rain P",
+    "description": "Disney's The Lion King is about a young lion named Simba, who is the crown prince of an African Savanna. When his father dies in an accident staged by his uncle, Simba is made to feel responsible for his father's death and must overcome his fear of taking responsibility as the rightful heir to the throne.",
+    "isbn": 55241,
+    "status": "Available",
+    "item_count": 7
+  },
+  {
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "publisher": "O'Reilly Media",
+    "description": "This book provides a developer-level introduction along with more advanced and useful features of JavaScript.",
+    "isbn": 59651748,
+    "status": "Available",
+    "item_count": 5
+  },
+  {
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "publisher": "MIT Press",
+    "description": "The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers.",
+    "isbn": 26203384,
+    "status": "Available",
+    "item_count": 3
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publisher": "Prentice Hall",
+    "description": "A Handbook of Agile Software Craftsmanship, provides the reader with the principles and best practices for writing clean code.",
+    "isbn": 13598745,
+    "status": "Available",
+    "item_count": 8
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "publisher": "Addison-Wesley",
+    "description": "The book provides practical advice on software development.",
+    "isbn": 20161669,
+    "status": "Available",
+    "item_count": 6
+  },
+  {
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "publisher": "Addison-Wesley",
+    "description": "The book introduced the concept of design patterns in software engineering.",
+    "isbn": 20163361,
+    "status": "Available",
+    "item_count": 4
+  },
+  {
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "publisher": "Addison-Wesley",
+    "description": "Improving the Design of Existing Code, is a guide to refactoring and improving the structure of existing code.",
+    "isbn": 20148567,
+    "status": "Available",
+    "item_count": 2
+  },
+  {
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "publisher": "O'Reilly Media",
+    "description": "A book series diving deep into the core mechanisms of the JavaScript language.",
+    "isbn": 1491904240,
+    "status": "Available",
+    "item_count": 10
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "publisher": "No Starch Press",
+    "description": "A Modern Introduction to Programming.",
+    "isbn": 1593275846,
+    "status": "Available",
+    "item_count": 3
+  },
+  {
+    "title": "The Art of Computer Programming",
+    "author": "Donald E. Knuth",
+    "publisher": "Addison-Wesley",
+    "description": "A comprehensive monograph written by Donald Knuth that covers many kinds of programming algorithms and their analysis.",
+    "isbn": 20189683,
+    "status": "Available",
+    "item_count": 5
+  },
+  {
+    "title": "Effective Java",
+    "author": "Joshua Bloch",
+    "publisher": "Addison-Wesley",
+    "description": "A programming book about the Java programming language, providing guidelines for writing better Java code.",
+    "isbn": 13284653,
+    "status": "Available",
+    "item_count": 7
+  },
+  {
+    "title": "Code Complete",
+    "author": "Steve McConnell",
+    "publisher": "Microsoft Press",
+    "description": "A practical handbook of software construction.",
+    "isbn": 73561947,
+    "status": "Available",
+    "item_count": 9
+  },
+  {
+    "title": "Cracking the Coding Interview",
+    "author": "Gayle Laakmann McDowell",
+    "publisher": "CareerCup",
+    "description": "150 Programming Questions and Solutions.",
+    "isbn": 200202,
+    "status": "Available",
+    "item_count": 6
+  },
+  {
+    "title": "The Mythical Man-Month",
+    "author": "Frederick P. Brooks Jr.",
+    "publisher": "Addison-Wesley",
+    "description": "Essays on Software Engineering.",
+    "isbn": 20183595,
+    "status": "Available",
+    "item_count": 4
+  },
+  {
+    "title": "The C Programming Language",
+    "author": "Brian W. Kernighan",
+    "publisher": "Prentice Hall",
+    "description": "The book is considered the authoritative reference on C.",
+    "isbn": 13311031,
+    "status": "Available",
+    "item_count": 3
+  },
+  {
+    "title": "Introduction to the Theory of Computation",
+    "author": "Michael Sipser",
+    "publisher": "Cengage Learning",
+    "description": "A text for theoretical computer science.",
+    "isbn": 53495036,
+    "status": "Available",
+    "item_count": 2
+  },
+  {
+    "title": "Algorithms",
+    "author": "Robert Sedgewick",
+    "publisher": "Addison-Wesley",
+    "description": "A book that covers many different algorithms and data structures.",
+    "isbn": 20178552,
+    "status": "Available",
+    "item_count": 5
+  },
+  {
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell",
+    "publisher": "Prentice Hall",
+    "description": "The book is a university textbook for artificial intelligence.",
+    "isbn": 13623105,
+    "status": "Available",
+    "item_count": 6
+  },
+  {
+    "title": "Structure and Interpretation of Computer Programs",
+    "author": "Harold Abelson",
+    "publisher": "MIT Press",
+    "description": "The book teaches fundamental principles of computer programming.",
+    "isbn": 26201153,
+    "status": "Available",
+    "item_count": 8
+  },
+  {
+    "title": "Compilers: Principles, Techniques, and Tools",
+    "author": "Alfred V. Aho",
+    "publisher": "Addison-Wesley",
+    "description": "A textbook on compiler construction.",
+    "isbn": 20110088,
+    "status": "Available",
+    "item_count": 3
+  },
+  {
+    "title": "Database System Concepts",
+    "author": "Abraham Silberschatz",
+    "publisher": "McGraw-Hill",
+    "description": "The book provides the fundamental concepts of database systems.",
+    "isbn": 72161395,
+    "status": "Available",
+    "item_count": 4
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "publisher": "O'Reilly Media",
+    "description": "The book discusses the architectural principles of building data-intensive applications.",
+    "isbn": 1491903066,
+    "status": "Available",
+    "item_count": 7
+  },
+  {
+    "title": "Operating System Concepts",
+    "author": "Abraham Silberschatz",
+    "publisher": "John Wiley & Sons",
+    "description": "The book covers the fundamental concepts of operating systems.",
+    "isbn": 470128723,
+    "status": "Available",
+    "item_count": 5
+  },
+  {
+    "title": "Computer Networks",
+    "author": "Andrew S. Tanenbaum",
+    "publisher": "Pearson",
+    "description": "A book on computer networking principles.",
+    "isbn": 133086908,
+    "status": "Available",
+    "item_count": 3
+  },
+  {
+    "title": "Distributed Systems: Principles and Paradigms",
+    "author": "Andrew S. Tanenbaum",
+    "publisher": "Prentice Hall",
+    "description": "A book on the principles of distributed systems.",
+    "isbn": 133098764,
+    "status": "Available",
+    "item_count": 4
+  }]
