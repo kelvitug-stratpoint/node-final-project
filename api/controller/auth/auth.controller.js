@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const User = require('../../models/user/user.model');
 const Borrower = require('../../models/borrower/borrower.model');
+const dummyUsers = require('../../../data/dummy/users.json');
 
 const privateKey = fs.readFileSync(path.join(__dirname, '../../../keys/private.key'), 'utf8');
 
@@ -34,5 +35,28 @@ exports.login = async (req, res) => {
     res.json({ token });
   } catch (error) {
     res.status(500).json({ message: error });
+  }
+};
+
+exports.createDummyUsers = async (req, res) => {
+  try {
+    // Iterate over the dummy users and save each one
+    const userPromises = dummyUsers.map(async (user) => {
+      const newUser = new User(user);
+      await Borrower.create({
+        id: newUser.id,
+        fullname: user.fullname
+      })
+
+      return newUser.save();
+    });
+
+    // Wait for all promises to resolve
+    const savedUsers = await Promise.all(userPromises);
+
+    // Send the response with the saved users
+    res.json(savedUsers);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };

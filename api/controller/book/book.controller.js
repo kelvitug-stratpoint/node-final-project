@@ -1,4 +1,5 @@
 const Book = require('../../models/book/book.model');
+const dummyBooks = require('../../../data/dummy/books.json');
 
 
 exports.createBook = async (req, res) => {
@@ -6,7 +7,7 @@ exports.createBook = async (req, res) => {
     const { title } = req.body;
     const duplicateBook = await Book.findOne({ title: title });
 
-    if(duplicateBook){
+    if (duplicateBook) {
       res.status(400).json({ message: 'Duplicate book found' });
     }
     const book = new Book(req.body);
@@ -28,7 +29,7 @@ exports.updateBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
     await book.validate();
-    res.json({ message: 'Book successfully updated!'});
+    res.json({ message: 'Book successfully updated!' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -67,3 +68,17 @@ exports.getBookById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+
+exports.createDummyBooks = async (req, res) => {
+  try {
+    await Book.insertMany(dummyBooks).then(function (docs) {
+      res.json(docs);
+    }).catch(function (error) {
+      res.status(500).send(error);
+    });
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}

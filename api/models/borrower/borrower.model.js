@@ -13,7 +13,7 @@ const borrowerSchema = new mongoose.Schema({
     required: [true, 'Full Name is required']
   },
   max_books: { type: Number, default: 5 },
-  books: bookSchema,
+  books: [bookSchema],
 });
 
 module.exports = mongoose.model('Borrower', borrowerSchema);

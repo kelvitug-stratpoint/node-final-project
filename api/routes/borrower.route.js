@@ -6,5 +6,6 @@ const auth = require('../../middleware/auth.middleware');
 router.get('/', auth, getBorrowedBooks);
 // router.post('/return', auth, createBook);
 
+router.post('/return-book/:book_id', auth, returnBook);
 
 module.exports = router;
