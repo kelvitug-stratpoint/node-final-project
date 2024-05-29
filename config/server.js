@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
 const dotEnv = require('dotenv')
-require('../config/mongodb');
 dotEnv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res, next) => {
     res.send("Hello from Express!");

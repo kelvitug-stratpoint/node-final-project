@@ -1,7 +1,7 @@
 const express = require('express');
 const app = require('./config/server')
-require('./config/mongodb');
-
+const { connectDB } = require('./config/mongodb');
+connectDB();
 //routes
 const bookRoute = require('./api/routes/book.route')
 const borrowerRoute = require('./api/routes/borrower.route')

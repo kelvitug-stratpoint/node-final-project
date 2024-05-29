@@ -14,8 +14,9 @@ exports.createBook = async (req, res) => {
     await book.save();
 
     await book.validate();
-    res.json({
-      message: 'Book successfully added!'
+    res.status(200).json({
+      message: 'Book successfully added!',
+      bookId: book.id
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -29,7 +30,10 @@ exports.updateBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
     await book.validate();
-    res.json({ message: 'Book successfully updated!' });
+    res.json({ 
+      message: 'Book successfully updated!',
+      bookId: book.id
+     });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -41,7 +45,7 @@ exports.deleteBook = async (req, res) => {
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
-    res.json({ message: 'Book deleted successfully' });
+    res.json({ message: 'Book successfully deleted!' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -49,7 +53,6 @@ exports.deleteBook = async (req, res) => {
 
 exports.getAllBooks = async (req, res) => {
   try {
-    console.log(req.userId);
     const books = await Book.find({ deleted_at: null });
     res.json(books);
   } catch (error) {

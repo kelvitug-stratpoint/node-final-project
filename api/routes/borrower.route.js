@@ -4,7 +4,6 @@ const { returnBook, getBorrowedBooks } = require('../controller/borrower/borrowe
 const auth = require('../../middleware/auth.middleware');
 
 router.get('/', auth, getBorrowedBooks);
-// router.post('/return', auth, createBook);
 
 router.post('/return-book/:book_id', auth, returnBook);
 

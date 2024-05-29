@@ -16,7 +16,7 @@ exports.register = async (req, res) => {
       id: user.id,
       fullname
     })
-    res.json({ message: 'User registered successfully' });
+    res.status(200).json({ message: 'User registered successfully' });
   } catch (error) {
     res.status(500).json({ message:  error  });
   }
@@ -32,7 +32,7 @@ exports.login = async (req, res) => {
     }
     const payload = { userId: user.id };
     const token = jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: process.env.JWT_EXPIRES_IN });
-    res.json({ token });
+    res.status(200).json({ token });
   } catch (error) {
     res.status(500).json({ message: error });
   }
@@ -55,7 +55,7 @@ exports.createDummyUsers = async (req, res) => {
     const savedUsers = await Promise.all(userPromises);
 
     // Send the response with the saved users
-    res.json(savedUsers);
+    res.status(200).json(savedUsers);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
