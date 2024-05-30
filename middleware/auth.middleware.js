@@ -6,10 +6,10 @@ const publicKey = fs.readFileSync(path.join(__dirname, '../keys/public.key'), 'u
 
 module.exports = (req, res, next) => {
   const authHeader = req.headers.authorization;
-  if (!authHeader) res.status(401).json({ message: 'No token provided' });
+  if (!authHeader) return res.status(401).json({ message: 'No token provided' });
 
   const token = authHeader.split(' ')[1];
-  if (!token) res.status(401).json({ message: 'Invalid token format' });
+  if (!token) return res.status(401).json({ message: 'Invalid token format' });
 
   try {
     const decoded = jwt.verify(token, publicKey, { algorithms: ['RS256'] });
@@ -18,6 +18,6 @@ module.exports = (req, res, next) => {
     console.log(`UserId: ${req.userId}`);
     next();
   } catch (err) {
-    res.status(401).json({ message: 'Unauthorized' });
+    return res.status(401).json({ message: 'Unauthorized' });
   }
 };

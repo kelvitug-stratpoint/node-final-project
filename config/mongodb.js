@@ -7,8 +7,6 @@ if (process.env.NODE_ENV === "testing") {
   database_url = database = process.env.MONGO_CONNECTION_TEST;
 }
 
-
-
 const connectDB = async () => {
   if (mongoose.connection.readyState === 0) {
     await mongoose.connect(database_url);

@@ -8,18 +8,18 @@ exports.createBook = async (req, res) => {
     const duplicateBook = await Book.findOne({ title: title });
 
     if (duplicateBook) {
-      res.status(400).json({ message: 'Duplicate book found' });
+      return res.status(400).json({ message: 'Duplicate book found' });
     }
     const book = new Book(req.body);
     await book.save();
 
     await book.validate();
-    res.status(200).json({
+    return res.status(200).json({
       message: 'Book successfully added!',
       bookId: book.id
     });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -30,33 +30,33 @@ exports.updateBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
     await book.validate();
-    res.json({ 
+    return res.json({ 
       message: 'Book successfully updated!',
       bookId: book.id
      });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
 exports.deleteBook = async (req, res) => {
   try {
-    const book = await Book.findOneAndUpdate({ id: req.params.id }, { deleted_at: new Date() });
+    const book = await Book.findOneAndUpdate({ id: req.params.id }, { deleted_at: new Date() }, { new: true });
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
-    res.json({ message: 'Book successfully deleted!' });
+    return res.json({ message: 'Book successfully deleted!' });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
 exports.getAllBooks = async (req, res) => {
   try {
     const books = await Book.find({ deleted_at: null });
-    res.json(books);
+    return res.json(books);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -66,9 +66,9 @@ exports.getBookById = async (req, res) => {
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
-    res.json(book);
+    return res.json(book);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -76,12 +76,12 @@ exports.getBookById = async (req, res) => {
 exports.createDummyBooks = async (req, res) => {
   try {
     await Book.insertMany(dummyBooks).then(function (docs) {
-      res.json(docs);
+      return res.json(docs);
     }).catch(function (error) {
-      res.status(500).send(error);
+      return res.status(500).send(error);
     });
 
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 }

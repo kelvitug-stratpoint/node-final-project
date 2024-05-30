@@ -1,9 +1,9 @@
 {
-    "title": "Mystic Horizons",
-    "author": "Leona Hart",
-    "publisher": "Sunset Publishing",
-    "description": "An epic tale of adventure and discovery.",
-    "isbn": 39284,
+    "title": "Introduction to Algorithms - test",
+    "author": "Thomas H. Cormen v2",
+    "publisher": "MIT Press v4 ",
+    "description": "The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers.",
+    "isbn": 26203384,
     "status": "Available",
-    "item_count": 3
+    "item_count": 1
 }

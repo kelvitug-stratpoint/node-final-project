@@ -1,9 +1,17 @@
-{
-    "title": "The Forgotten Path",
-    "author": "Evelyn Waters",
-    "publisher": "Seaside Reads",
-    "description": "A heartwarming story of rediscovering lost dreams.",
-    "isbn": 76384,
+[{
+    "title": "Introduction to Algorithms - test",
+    "author": "Thomas H. Cormen",
+    "publisher": "MIT Press",
+    "description": "The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers.",
+    "isbn": 26203384,
     "status": "Available",
-    "item_count": 3
-}
+    "item_count": 1
+},{
+    "title": "Introduction to Algorithms - test v3",
+    "author": "Thomas H. Cormen",
+    "publisher": "MIT Press",
+    "description": "The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers.",
+    "isbn": 26203384,
+    "status": "Available",
+    "item_count": 1
+}]
