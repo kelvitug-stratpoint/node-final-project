@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "coverage": "nyc npm run test",
     "test-coverage": "nyc --reporter=text mocha",
     "serve": "nodemon index.js"
+  },
+  "nyc": {
+    "exclude": [
+      "config/**"
+    ]
   },
   "repository": {
     "type": "git",
