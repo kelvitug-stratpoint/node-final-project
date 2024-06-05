@@ -10,15 +10,18 @@ const privateKey = fs.readFileSync(path.join(__dirname, '../../../keys/private.k
 exports.register = async (req, res) => {
   const { id, username, password, fullname } = req.body;
   try {
-
+    const duplicateUser = await User.findOne({username});
+    if(duplicateUser){
+      return res.status(400).json({ message:  'User already exists in the system'  });
+    }
     const user = await User.create({ username, password });
     await Borrower.create({
       id: user.id,
       fullname
     })
-    res.status(200).json({ message: 'User registered successfully' });
+    return res.status(200).json({ message: 'User registered successfully' });
   } catch (error) {
-    res.status(500).json({ message:  error  });
+    return res.status(500).json({ message:  error.message  });
   }
 };
 
@@ -32,9 +35,9 @@ exports.login = async (req, res) => {
     }
     const payload = { userId: user.id };
     const token = jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: process.env.JWT_EXPIRES_IN });
-    res.status(200).json({ token });
+    return res.status(200).json({ token });
   } catch (error) {
-    res.status(500).json({ message: error });
+    return res.status(500).json({ message: error });
   }
 };
 
@@ -55,8 +58,8 @@ exports.createDummyUsers = async (req, res) => {
     const savedUsers = await Promise.all(userPromises);
 
     // Send the response with the saved users
-    res.status(200).json(savedUsers);
+    return res.status(200).json(savedUsers);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
